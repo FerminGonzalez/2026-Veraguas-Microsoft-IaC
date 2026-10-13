@@ -1,0 +1,12 @@
+# Copia este archivo a `terraform.tfvars` y ajusta el valor.
+#
+#   cp terraform.tfvars.example terraform.tfvars
+#
+# NOTA: `terraform.tfvars` esta en .gitignore y NO debe commitearse
+# (especifico del equipo y puede contener datos sensibles).
+
+# Identificador numerico del equipo en el hackathon Copa 2026.
+# - Determina los nombres: rg-team-{id}, app frontend/backend, LAW, App Insights.
+# - Determina el plan compartido via locals.plan_index = floor((team_id-1)/2)+1
+#   (los equipos consecutivos comparten plan; p. ej. team_id 12 y 13 -> plan 06).
+team_id = 13

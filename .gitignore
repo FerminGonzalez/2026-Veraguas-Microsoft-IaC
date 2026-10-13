@@ -1,0 +1,34 @@
+# --- Terraform ---
+# Directorio de plugins/proveedores descargados por `terraform init`
+.terraform/
+
+# Estado local (nunca commitear: puede contener secretos y es delicado)
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variables con valores reales (commitear solo el .example)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Archivos de plan generados (deploy.ps1 los crea en .terraform/)
+*.tfplan
+
+# Overrides locales
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# NOTA: .terraform.lock.hcl NO esta ignorado a proposito.
+# HashiCorp recomienda commitearlo porque fija las versiones exactas de los
+# proveedores, haciendo los despliegues replicables entre miembros del equipo.
+
+# --- Sistema / editores ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
